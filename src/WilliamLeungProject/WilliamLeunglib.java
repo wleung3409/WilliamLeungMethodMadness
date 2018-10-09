@@ -53,5 +53,15 @@ public class WilliamLeunglib {
         /// keeps adding until it reaches input, returns the sum of all numbers before it
         return sum;
     }
-}
-
+    public static String quadSolver(double a,double b, double c){
+        double discriminant = b * b - 4 * a * c;
+        if ((discriminant < 0)) {
+            return "Complex Roots";
+            /// the discriminant determines if the roots are complex or not, it also helps with setting up the next part
+        }
+        double x = (-1*b + Math.sqrt(discriminant))/(2*a);
+        double y = (-1*b - Math.sqrt(discriminant))/(2*a);
+        /// quadratic formula has two answers, + and - , I set and returned both values
+        return x + "," +y;
+        }
+    }
