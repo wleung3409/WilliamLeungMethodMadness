@@ -24,20 +24,25 @@ public class WilliamLeunglib {
 
     public static String cutOut(String mainStr, String subStr) {
         int position = mainStr.indexOf(subStr);
+        /// first find where the subStr is located in the code
         String cutoff = mainStr.substring(0, position) + mainStr.substring(position + subStr.length());
+        ///create a substring where it begins at 0 and the position, skips the subStr, and then continue, basically cutting it off
         return cutoff;
     }
 
-    public static boolean isFibonnaci(int input) {
+    public static boolean isFibonacci(int input) {
         int sum = 0;
         int x = 0;
         int y = 1;
+        /// set three variables, one sum, and the two to add up to that sum
         while (sum <= input) {
             x = y;
             y = sum;
             sum = x + y;
+            /// set the sum to the highest fibonacci number given the input
         }
         return (input == sum - x);
+        /// return true of false based on the previous fibonacci number
     }
 
     public static int sumupTo(int input) {
@@ -45,6 +50,7 @@ public class WilliamLeunglib {
         for (int z = 0; z <= input; z++) {
             sum = sum + z;
         }
+        /// keeps adding until it reaches input, returns the sum of all numbers before it
         return sum;
     }
 }
